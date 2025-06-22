@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alerta Verde - Conscientização Ambiental</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <i class="fas fa-leaf"></i>
+            <span>Alerta Verde</span>
+          </div>
+          <div class="nav-menu">
+            <a href="#home" class="nav-link">Início</a>
+            <a href="#info" class="nav-link">Informações</a>
+            <a href="#quiz" class="nav-link">Quiz</a>
+            <a href="#form" class="nav-link">Enviar Sugestão</a>
+            <div class="theme-switcher">
+              <button
+                id="theme-toggle"
+                class="theme-btn"
+                aria-label="Alternar tema"
+              >
+                <i class="fas fa-moon"></i>
+              </button>
+            </div>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link">Início</a>
+        <a href="#info" class="mobile-link">Informações</a>
+        <a href="#quiz" class="mobile-link">Quiz</a>
+        <a href="#form" class="mobile-link">Enviar Sugestão</a>
+        <div class="mobile-theme-switcher">
+          <button
+            id="mobile-theme-toggle"
+            class="theme-btn"
+            aria-label="Alternar tema"
+          >
+            <i class="fas fa-moon"></i>
+            <span>Trocar Tema</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="main-content">
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Alerta Verde</h1>
+          <p class="hero-subtitle">Conscientização e Ação Ambiental</p>
+          <p class="hero-description">
+            Juntos pela sustentabilidade e prevenção de desastres ambientais
+          </p>
+        </div>
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img
+              src="./src/assets/images/enchente.jpg"
+              alt="Desastres causados por enchentes"
+            />
+            <div class="slide-caption">
+              <h3>Prevenção de Enchentes</h3>
+              <p>
+                Desastres naturais podem ser prevenidos com ações conscientes
+              </p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img
+              src="./src/assets/images/descarte.png"
+              alt="Boas práticas de descarte de lixo"
+            />
+            <div class="slide-caption">
+              <h3>Descarte Consciente</h3>
+              <p>Práticas adequadas de descarte preservam o meio ambiente</p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img
+              src="./src/assets/images/sustentabilidade.jpg"
+              alt="Projetos urbanos sustentáveis"
+            />
+            <div class="slide-caption">
+              <h3>Cidades Sustentáveis</h3>
+              <p>Projetos urbanos que respeitam o meio ambiente</p>
+            </div>
+          </div>
+          <div class="slide-nav">
+            <button class="slide-dot active" data-slide="0"></button>
+            <button class="slide-dot" data-slide="1"></button>
+            <button class="slide-dot" data-slide="2"></button>
+          </div>
+        </div>
+      </section>
+      <section id="info" class="info-section">
+        <div class="container">
+          <h2 class="section-title">Informações Ambientais</h2>
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-water"></i>
+              </div>
+              <h3>Prevenção de Enchentes</h3>
+              <p>
+                Descarte adequado de lixo evita entupimento de bueiros e reduz
+                riscos de alagamentos.
+              </p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h3>Reciclagem</h3>
+              <p>
+                Separação correta dos resíduos contribui para economia circular
+                e sustentabilidade.
+              </p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <h3>ESG</h3>
+              <p>
+                Práticas ambientais, sociais e de governança para um futuro
+                sustentável.
+              </p>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-city"></i>
+              </div>
+              <h3>Cidades Sustentáveis</h3>
+              <p>
+                Planejamento urbano que integra natureza e desenvolvimento
+                responsável.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="quiz" class="quiz-section">
+        <div class="container">
+          <h2 class="section-title">
+            Quiz: Você conhece seu impacto ambiental?
+          </h2>
+
+          <div class="quiz-container">
+            <div class="quiz-header">
+              <div class="quiz-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <span class="progress-text" id="progress-text"
+                  >Pergunta 1 de 10</span
+                >
+              </div>
+            </div>
+
+            <div class="quiz-content" id="quiz-content">
+              <div class="question-container">
+                <h3 class="question" id="question-text">
+                  Carregando pergunta...
+                </h3>
+                <div class="answers" id="answers-container"></div>
+              </div>
+            </div>
+
+            <div class="quiz-controls">
+              <button class="quiz-btn" id="start-quiz">Iniciar Quiz</button>
+              <button class="quiz-btn" id="next-question" style="display: none">
+                Próxima Pergunta
+              </button>
+              <button class="quiz-btn" id="restart-quiz" style="display: none">
+                Reiniciar Quiz
+              </button>
+            </div>
+
+            <div class="quiz-results" id="quiz-results" style="display: none">
+              <h3>Resultado do Quiz</h3>
+              <div class="score-display">
+                <div class="score-circle">
+                  <span class="score-number" id="final-score">0</span>
+                  <span class="score-total">/10</span>
+                </div>
+              </div>
+              <p class="score-message" id="score-message">
+                Sua pontuação será exibida aqui
+              </p>
+              <div class="impact-assessment" id="impact-assessment"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="form" class="form-section">
+        <div class="container">
+          <h2 class="section-title">Enviar Sugestão ou Denúncia</h2>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Nome *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-input"
+                required
+              />
+              <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-input"
+                required
+              />
+              <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="type" class="form-label">Tipo *</label>
+              <select id="type" name="type" class="form-select" required>
+                <option value="">Selecione uma opção</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="denuncia">Denúncia</option>
+              </select>
+              <div class="error-message" id="type-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="description" class="form-label">Descrição *</label>
+              <textarea
+                id="description"
+                name="description"
+                class="form-textarea"
+                rows="5"
+                required
+              ></textarea>
+              <div class="error-message" id="description-error"></div>
+            </div>
+
+            <button type="submit" class="form-submit">Enviar</button>
+          </form>
+
+          <div class="form-success" id="form-success" style="display: none">
+            <div class="success-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Mensagem Enviada!</h3>
+            <p>
+              Obrigado por contribuir com a conscientização ambiental. Sua
+              mensagem foi recebida com sucesso.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Alerta Verde</h4>
+            <p>Conscientização e ação ambiental para um futuro sustentável.</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Links Úteis</h4>
+            <ul>
+              <li><a href="#home">Início</a></li>
+              <li><a href="#info">Informações</a></li>
+              <li><a href="#quiz">Quiz</a></li>
+              <li><a href="#form">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Impacto Ambiental</h4>
+            <ul>
+              <li><a href="#">ESG</a></li>
+              <li><a href="#">Sustentabilidade</a></li>
+              <li><a href="#">Prevenção</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Alerta Verde. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="quiz.js"></script>
+  <script src="themes.js"></script>
+  <script src="script.js"></script>
+</html>
